@@ -20,6 +20,7 @@ const plugins = [
         default: 'zh-CN', // default zh-CN
         baseNavigator: true, // default true, when it is true, will use `navigator.language` overwrite default
       },
+      // 动态导入
       dynamicImport: {
         loadingComponent: './components/PageLoading/index',
       },
@@ -52,6 +53,7 @@ export default {
   targets: {
     ie: 11,
   },
+  // 通过 webpack 的 DefinePlugin 传递给代码，值会自动做 JSON.stringify 处理
   define: {
     APP_TYPE: process.env.APP_TYPE || '',
   },
@@ -62,9 +64,11 @@ export default {
   theme: {
     'primary-color': defaultSettings.primaryColor,
   },
+
   externals: {
     '@antv/data-set': 'DataSet',
   },
+  // 要代理请求到其他服务器，可以这样配:
   // proxy: {
   //   '/server/api/': {
   //     target: 'https://preview.pro.ant.design/',
@@ -99,9 +103,10 @@ export default {
       return localName;
     },
   },
+  // 配置后生成manifest.json,配置模块与权限
   manifest: {
     basePath: '/',
   },
-
+// 通过 webpack-chain 的 API 扩展或修改 webpack 配置。
   chainWebpack: webpackPlugin,
 };
