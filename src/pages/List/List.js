@@ -59,20 +59,21 @@ class SearchList extends Component {
     const { match, children, location } = this.props;
 
     return (
-      <PageHeaderWrapper
-        title="搜索列表"
-        content={mainSearch}
-        tabList={tabList}
-        tabActiveKey={location.pathname.replace(`${match.path}/`, '')}
-        onTabChange={this.handleTabChange}
+      <div></div>
+      // <PageHeaderWrapper
+        // title="搜索列表"
+        // content={mainSearch}
+        // tabList={tabList}
+        // tabActiveKey={location.pathname.replace(`${match.path}/`, '')}
+        // onTabChange={this.handleTabChange}
       >
-        {children}
+        // {children}
         {/* <Switch>
           {routes.map(item => (
             <Route key={item.key} path={item.path} component={item.component} exact={item.exact} />
           ))}
         </Switch> */}
-      </PageHeaderWrapper>
+      // </PageHeaderWrapper>
     );
   }
 }

@@ -101,7 +101,7 @@ class Info extends Component {
     const { mode, selectKey } = this.state;
     return (
       <GridContent>
-        <div
+        {/* <div
           className={styles.main}
           ref={ref => {
             this.main = ref;
@@ -116,7 +116,7 @@ class Info extends Component {
             <div className={styles.title}>{this.getRightTitle()}</div>
             {children}
           </div>
-        </div>
+        </div> */}
       </GridContent>
     );
   }
