@@ -1,4 +1,5 @@
 // https://umijs.org/config/
+// umi的配置文件
 import os from 'os';
 import pageRoutes from './router.config';
 import webpackPlugin from './plugin.config';
