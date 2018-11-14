@@ -6,7 +6,7 @@ const GlobalFooter = ({ className, links, copyright }) => {
   const clsString = classNames(styles.globalFooter, className);
   return (
     <footer className={clsString}>
-      {links && (
+      {/* {links && (
         <div className={styles.links}>
           {links.map(link => (
             <a
@@ -19,8 +19,8 @@ const GlobalFooter = ({ className, links, copyright }) => {
             </a>
           ))}
         </div>
-      )}
-      {copyright && <div className={styles.copyright}>{copyright}</div>}
+      )} */}
+      {copyright && <div className={styles.copyright}>copyright © 苏州绿叶日用品有限公司</div>}
     </footer>
   );
 };

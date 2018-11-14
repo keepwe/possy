@@ -180,18 +180,19 @@ export default class BaseMenu extends PureComponent {
     }
     const { handleOpenChange, style, menuData } = this.props;
     return (
-      <Menu
-        key="Menu"
-        mode={mode}
-        theme={theme}
-        onOpenChange={handleOpenChange}
-        selectedKeys={selectedKeys}
-        style={style}
-        className={mode === 'horizontal' ? 'top-nav-menu' : ''}
-        {...props}
-      >
-        {this.getNavMenuItems(menuData)}
-      </Menu>
+      // <Menu
+      //   key="Menu"
+      //   mode={mode}
+      //   theme={theme}
+      //   onOpenChange={handleOpenChange}
+      //   selectedKeys={selectedKeys}
+      //   style={style}
+      //   className={mode === 'horizontal' ? 'top-nav-menu' : ''}
+      //   {...props}
+      // >
+      //   {this.getNavMenuItems(menuData)}
+      // </Menu>
+      <div></div>
     );
   }
 }
